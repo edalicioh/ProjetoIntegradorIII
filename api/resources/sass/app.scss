@@ -1,0 +1,49 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700');
+
+// Variables
+@import 'variables';
+@import './sidebar.scss';
+@import './navbar.scss';
+
+$fa-font-path:        "../webfonts";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~admin-lte/dist/css/adminlte.css' ;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+.img-logo-login{
+    width: 60%;
+}
+.auth{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #96CB48 , #04B157 ) !important;
+}
+.card{
+    border-radius: 10px !important;
+}
+.card.hide {
+    display: none;
+}
+.card.show {
+    display: block;
+}
+.card-login-sign{
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(4, 177, 87 ,.8) , rgba(4, 177, 87,.9)) !important;
+    .form-control {
+        border-radius: 10px ;
+    };
+    .btn-block{
+        border-radius: 10px;
+    };
+    a{
+        color: #ffffff;
+    }
+}

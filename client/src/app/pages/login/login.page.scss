@@ -1,0 +1,35 @@
+.login{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 2;
+    padding: 5%;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.4);
+    top: 33%;
+    text-align: center;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(0,0,0,.3) , rgba(0,0,0,.5));
+    span{
+        font-size: 2rem;
+    }
+    ion-item {
+        --background: rgba(255, 255, 255, 0.9);
+        --border-radius: 10px;
+
+        ion-input {
+            --color: #000000;
+        }
+    }
+}
+ion-content {
+    --background: linear-gradient(to bottom, #96CB48 , #04B157 ) !important;
+}
+p {
+    margin-top: 2em;
+    color: #fff;
+}
+.logo-top{
+    margin-top: 10%;
+}

@@ -1,0 +1,38 @@
+<ion-content>
+    <div class="logo-top">
+        <img src="./../../../assets/img/Logo_IFC_horizontal.png" alt="" srcset="">
+      </div>
+  <ng-container *ngIf="!exchange; else elseTemplate">
+      <div class="login">
+          <span>Email de Acesso</span>
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="email"  placeholder="E-mail" [(ngModel)]="email" ></ion-input>
+          </ion-item>
+      
+          <ion-button class="ion-margin-top" (click)="confirmEmail()" color="light" expand="block">
+            Entrar
+          </ion-button>
+          <p [routerLink]="['/login']">Voltar para o login</p>
+        </div>
+  </ng-container>
+  <ng-template #elseTemplate>
+      <div class="login">
+          <span>Cadastre sua Senha</span>
+      
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="password" [(ngModel)]="password"  placeholder="Senha" ></ion-input>
+          </ion-item>  
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="password"  [(ngModel)]="passwordConf"  placeholder="Confirmar sua Senha" ></ion-input>
+          </ion-item>
+      
+          <ion-button class="ion-margin-top" (click)="upPassword()" color="light" expand="block">
+            Entrar
+          </ion-button>
+          <p (click)="exchange = false" >Voltar </p>
+        </div>
+  </ng-template>
+     
+  </ion-content>
+  
+  

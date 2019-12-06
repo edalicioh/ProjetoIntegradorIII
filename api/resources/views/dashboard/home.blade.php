@@ -1,0 +1,1 @@
+{{  dd( session()->get('user') ) }}

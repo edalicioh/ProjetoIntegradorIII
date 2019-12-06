@@ -1,0 +1,34 @@
+Neste projeto foi usado
+
+--- Para configurar o API --- 
+
+passo 01 => laravel new <nome>
+*passo 02 => composer require laravel/ui --dev
+*passo 03 => php artisan ui vue --auth
+*passo 04 => npm install && npm run dev
+passo 05 => composer require tymon/jwt-auth "1.0.*"
+passo 06 => php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+passo 07 => php artisan jwt:secret
+passo 08 => php artisan make:controller Api/AuthController
+passo 09 => seguir a docs => https://jwt-auth.readthedocs.io/en/develop/quick-start/
+passo 10 => php artisan make:seeder UsersTableSeeder
+passo 11 => descomentar no arquivo "DatabaseSeeder.php" na parte => $this->call(UserTableSeeder::class);
+passo 12 => php artisan migrate --seed
+passo 13 => composer require barryvdh/laravel-cors
+passo 14 => ir ate app/Http/Kernel.php e colocar => 'api' => [ ... , \Barryvdh\Cors\HandleCors::class,]
+passo 15 => php artisan vendor:publish --provider="Barryvdh\Cors\ServiceProvider"
+passo 14 => ir ate App\Http\Middleware\VerifyCsrfToken  e colocar => protected $except = [ 'api/*'];
+
+--- Para Laravel Adminlte CLIENTE WEB ---
+
+passo 01 => composer require jeroennoten/laravel-adminlte
+passo 02 => php artisan adminlte:install
+
+
+--- Para a comfiguracao do CLIENTE MOBILE ---
+
+passo 01 => ionic start <nome> <tipo>
+passo 02 => gerar paginas nesessarias com => ionic g page <paginas>
+passo 03 => importar o modulo "HttpClientModule" no app.module.ts
+passo 04 => gerar os servicos com => ionic g service <nome>
+passo 04 => gerar os a tipagen com => ionic g interface <nome>

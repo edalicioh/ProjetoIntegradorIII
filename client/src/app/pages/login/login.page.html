@@ -1,0 +1,22 @@
+<ion-content class="content-login">
+  <div class="logo-top">
+    <img src="./../../../assets/img/Logo_IFC_horizontal.png" alt="" srcset="">
+  </div>
+  <div class="login">
+    <span>Faça seu login</span>
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-input type="email" [(ngModel)]="email" placeholder="E-mail"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-input type="password" [(ngModel)]="password" placeholder="Senha"></ion-input>
+    </ion-item>
+
+    <ion-button class="ion-margin-top" (click)="login()" color="light" expand="block">
+      Entrar
+    </ion-button>
+    <p [routerLink]="['/signup']">
+      Não possuo login
+    </p>
+  </div>
+</ion-content>
